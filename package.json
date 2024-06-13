@@ -1,0 +1,15 @@
+{
+  "name": "drinky-cafe",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "build-css": "npx tailwindcss -i ./master.css -o ./dist/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
+  }
+}

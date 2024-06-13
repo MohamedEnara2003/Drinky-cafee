@@ -1,0 +1,1004 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  @apply m-0 p-0 scroll-smooth font-Drinky_font;
+  
+}
+.slides{
+  animation-name: slider;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+  transform: translateX(-2100%);
+}
+@keyframes slider{
+  0%{
+    transform: translateX(-2100%);
+  }
+  100%{
+    transform:translateX(2100%);
+  }
+}
+
+@media (min-width: 1024px){
+  .slides{
+    animation-name: slider;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.5s;
+    transform: translateX(-2800%);
+  }
+
+  @keyframes slider{
+    0%{
+      transform: translateX(-2800%);
+    }
+    100%{
+      transform:translateX(2900%);
+    }
+  }
+  
+} 
+
+
+@layer components{
+
+
+  .intro__page{
+  @apply  fixed w-full h-screen left-0 top-0 z-[500000] bg-white flex
+  justify-center items-center
+}
+.logo__intro{
+  @apply w-[100px] z-[500000]
+}
+.logo__intro-2{
+  @apply w-[300px] z-[500000] absolute top-0
+}
+
+  .header {
+    @apply relative w-full h-screen overflow-hidden
+    bg-cover bg-no-repeat;
+  }
+
+
+  .nav-list {
+    @apply fixed w-[0%] h-[420px] flex flex-col flex-wrap justify-start items-start
+  bg-[#eee] right-0 top-[50px] duration-300 z-[20000] shadow-[#333]
+  shadow-lg
+  }
+
+  .links-header{
+    @apply relative text-[#333] font-extrabold uppercase 
+    duration-1000 text-[1.2rem] hover:after:w-full  hover:after:h-[4px]
+  hover:after:bg-drinky hover:after:absolute  hover:after:bottom-0 
+    hover:after:left-0 ;
+  }
+
+  .btn-loction{
+    @apply absolute text-center text-[0.8rem] text-[#333] bottom-[10px]
+    capitalize italic font-bold hover:text-green-500 hover:scale-[1.1]
+    duration-500 left-[50%] underline decoration-green-700;
+  }
+
+  .links-header--2{
+    @apply hidden
+  }
+  .btn-loction--2{
+    @apply hidden
+  }
+
+  .material-icons {
+    @apply text-drinky 
+  }
+  .manu-icon,
+  .contact-icon,
+  .about-icon {
+    @apply text-drinky
+  }
+  .navigation-full {
+    @apply w-full p-2 relative bg-drinky  z-[20000] flex justify-center items-center;
+  }
+
+  .logo__header{
+  @apply absolute left-0  w-[90px] h-[60px] cursor-pointer hover:rotate-[360deg]
+  duration-[1.5s] ;
+}
+  .fa-list-ul {
+    @apply absolute right-3 top-[10px] text-[#eee] cursor-pointer;
+  }
+  .number__header{
+    @apply text-[1rem] bg-black text-drinky rounded-[5px] font-extrabold italic
+    hover:scale-[1.1] duration-700 tracking-wider p-1 cursor-pointer shadow-md
+    shadow-[#333];
+  }
+
+  .text-header {
+    @apply w-full  absolute font-bold bg-black translate-x-[-100%]
+    duration-[3s]; 
+  }
+  .h1-header {
+    @apply text-[2.2rem] text-[#eee] uppercase absolute 
+    top-[120px] left-5 tracking-[3px] leading-[60px] italic
+    font-extrabold;
+  }
+  .p-header {
+    @apply text-[1.4rem] text-drinky capitalize absolute 
+    top-[350px] left-5 font-bold italic;
+  }
+  .siders__menu--header{
+    @apply w-full flex flex-row flex-nowrap justify-center items-center
+    absolute bottom-2
+  }
+  .slides{
+    @apply w-[50px] mr-6 hover:opacity-[0.5] z-[3000]
+  }
+
+  .menu{
+    @apply w-full h-screen relative overflow-hidden
+    bg-[#eee]
+  }
+  .menu__left{
+    @apply absolute left-[5%] top-[19vh] h-[50vh] w-[45%] shadow-lg shadow-[#333] 
+    rounded-md translate-x-[-150%] duration-1000
+  }
+  .menu__right{
+    @apply absolute right-[5%] top-[19vh] h-[50vh] w-[45%] shadow-lg shadow-[#333]
+    rounded-md translate-x-[150%] duration-[1.5s]
+  }
+
+  .text__menu{
+    @apply relative w-full h-full flex justify-center items-center opacity-0
+    duration-[3s]
+  }
+
+  .h1-menu{
+    @apply text-[#333] uppercase tracking-[10px] italic absolute top-[40px]
+    text-[2.4rem] font-extrabold duration-700 hover:opacity-[0.7] 
+    cursor-pointer hover:scale-[1.2]
+  }
+  .p-menu{
+    @apply text-[#333] text-[1.2rem]  italic absolute
+    bottom-[100px] left-10 duration-500 font-bold capitalize
+  }
+  .btn__menu--bar{
+    @apply absolute bottom-[30px] text-[#333] bg-drinky uppercase
+    border-4 border-black p-1 text-[1.5rem] italic font-extrabold
+    rounded-lg cursor-pointer shadow-md shadow-green-700
+    hover:scale-[1.1] duration-500
+  }
+  .sliders{
+    @apply relative h-screen overflow-hidden
+    m-0 duration-1000  bg-[#eee]
+  }
+  .slide{
+    @apply absolute w-full h-[35rem] flex justify-center items-center duration-1000
+    opacity-0
+  }
+
+  .image__slide{
+    @apply w-[150px] h-[150px] rounded-[35%] shadow-md shadow-[#333] 
+    absolute cursor-pointer top-[90px]
+  }
+
+  .footer__slider{
+    @apply w-full h-[35vh] absolute bottom-0  bg-drinky 
+  }
+  .logo__slider{
+    @apply absolute right-0 bottom-0 w-[150px] opacity-[0.7]
+  }
+  .parent-text__slide{
+    @apply relative w-full h-full flex justify-center items-center opacity-0
+    duration-1000
+  }
+  .h1__slider{
+    @apply absolute text-[2rem] font-extrabold italic uppercase
+    text-[#333] tracking-widest   hover:opacity-[0.7] duration-500
+    top-2
+  }
+
+  .p__slider{
+    @apply absolute text-[1rem] font-bold italic capitalize
+    text-[#333] bottom-5 m-5
+  }
+
+  .btns__slider{
+    @apply absolute bg-drinky rounded-[40%] cursor-pointer shadow-md shadow-[#333]
+    top-[48%] w-[35px] hover:scale-[1.1] duration-500 z-[2000]
+  }
+
+  .btn__right{
+    @apply right-[-5px] opacity-0 duration-1000
+  }
+  .btn__left{
+  @apply left-[-5px] rotate-180 opacity-0 duration-1000
+  }
+  .parnt__btn__bigger{
+    @apply relative flex justify-center items-center w-full h-full 
+  }
+  .large__menu{
+    @apply absolute top-[55%] font-bold text-[1rem] italic text-black
+    bg-drinky border-black border-2 uppercase  rounded-md cursor-pointer p-1
+    hover:bg-transparent duration-500
+  }
+
+.Allreviews{
+  @apply relative w-full h-[200vh] overflow-hidden   bg-[#eee]
+}
+
+.elements__review{
+  @apply relative flex flex-row flex-wrap justify-center items-center h-full
+  top-[50px]
+}
+.review{
+  @apply w-[400px] shadow-[#333] shadow-sm rounded-md my-2
+  translate-x-[-150%] duration-[1.5s]  hover:opacity-[0.7]
+   cursor-pointer hover:shadow-none
+}
+
+.about{
+  @apply relative w-full h-screen overflow-hidden  bg-[#eee]
+}
+
+.text-about{
+@apply relative w-full h-full flex justify-center items-center 
+}
+
+.h1__about{
+  @apply absolute top-[50px] italic uppercase font-extrabold text-[2rem]
+  hover:opacity-[0.7] duration-[2s] translate-x-[-100%]
+}
+.span__about{
+  @apply text-drinky
+}
+.line{
+  @apply absolute w-[300px] top-[120px] h-[4px] bg-drinky
+}
+.p__about{
+  @apply  italic capitalize font-bold text-[1.4rem] tracking-widest m-3
+  opacity-0 duration-[3s]
+}
+.btn-loction__about{
+  @apply absolute bottom-[80px] font-bold italic capitalize tracking-wide
+  text-[1.5rem] cursor-pointer hover:opacity-[0.7]  duration-[2s] translate-x-[-100%]
+}
+
+.contact{
+  @apply relative w-full h-screen overflow-hidden flex justify-center
+  border-b-drinky   bg-white
+}
+.h1__contact{
+  @apply text-[1.5rem] font-extrabold uppercase tracking-widest italic
+  text-center absolute top-[60px] duration-[2s] translate-x-[-100%]
+}
+.span__contact{
+  @apply text-drinky
+}
+.nav__contact{
+  @apply absolute top-[45%] w-full  flex flex-wrap justify-center items-center
+  opacity-0 duration-[1.5s]
+}
+.links__contact{
+  @apply text-[1.2rem] font-extrabold uppercase italic mr-7
+  hover:text-drinky  duration-500
+}
+
+.nav--links__contact{
+  @apply absolute top-[30%] w-full  flex flex-wrap justify-center items-center
+  opacity-0 duration-[1.5s]
+}
+
+.facebook,
+.fa-instagram,
+.group,
+.call,
+.whatsapp{
+  @apply mr-5  text-black bg-drinky rounded-[50%] p-1 cursor-pointer
+  shadow-md shadow-[#333] hover:opacity-[0.8] duration-500 
+}
+
+.btn-loction__contact{
+  @apply absolute bottom-[120px] font-bold italic capitalize tracking-wide
+  text-[1.5rem] cursor-pointer hover:opacity-[0.7] opacity-0 duration-[1.5s]
+
+}
+.h2__contact{
+  @apply absolute bottom-[20px] capitalize font-bold tracking-wide
+  text-[1rem]  m-4 duration-[2s] translate-x-[-100%]
+}
+.logo__contact{
+  @apply w-[100px] h-[80px] absolute bottom-[160px] 
+}
+.blur{
+  @apply fixed w-full h-screen overflow-hidden 
+  left-0 top-0 backdrop:blur-lg z-[5000]
+}}
+
+
+@layer components{
+
+  .links-header{
+    @apply m-5 sm:text-[1.4rem] sm:tracking-widest
+  }
+  
+  .btn-loction{
+    @apply  sm:text-[1.3rem]  sm:bottom-[50px] sm:left-[35%] 
+  }
+
+
+  .h1-header {
+  @apply sm:text-[3rem] sm:top-[250px] sm:left-5 sm:tracking-[2px] sm:leading-[60px] 
+  }
+  .p-header {
+    @apply sm:text-[2rem] sm:top-[450px] sm:left-5;
+  }
+  .slides{
+    @apply sm:w-[70px] sm:mr-6 
+  }
+
+ .menu__left{
+    @apply  sm:left-[15%] sm:top-[20vh] sm:h-[50vh] sm:w-[35%] 
+  }
+  .menu__right{
+    @apply  sm:right-[15%] sm:top-[20vh] sm:h-[50vh] sm:w-[35%]
+  }
+
+  .h1-menu{
+    @apply sm:tracking-[12px] sm:top-[50px] sm:text-[3rem]  
+  }
+
+  .p-menu{
+    @apply  sm:text-[1.5rem]  sm:bottom-[130px] sm:left-10 ;
+  }
+
+  .btn__menu--bar{
+    @apply  sm:bottom-[30px] sm:p-1 sm:text-[1.5rem] sm:text-center
+  }
+
+  .slide{
+    @apply  sm:h-[35rem]
+  }
+
+  .image__slide{
+    @apply sm:w-[250px] sm:h-[250px] sm:rounded-[35%] sm:top-[60px];
+  }
+  .footer__slider{
+    @apply  sm:h-[35vh] sm:bottom-0 
+  }
+
+  .logo__slider{
+    @apply  sm:right-0 sm:top-0 sm:w-[220px] 
+  }
+
+  .h1__slider{
+    @apply sm:text-[2.2rem] sm:tracking-widest sm:top-2
+  }
+
+  .p__slider{
+    @apply sm:text-[1.5rem] sm:bottom-10 sm:left-[5%]
+  }
+  .btns__slider{
+    @apply rounded-[40%] sm:top-[50%] sm:w-[50px] ;
+  }
+
+  .btn__right{
+    @apply sm:right-[-10px] 
+  }
+  .btn__left{
+  @apply sm:left-[-10px] 
+  }
+
+  .large__menu{
+    @apply sm:top-[55%] sm:text-[1.2rem] ;
+  }
+
+  .Allreviews{
+    @apply sm:relative sm:w-full sm:h-[100vh] bg-[#eee]
+  }
+  
+  .elements__review{
+    @apply sm:absolute sm:top-[50px] sm:left-0 sm:flex 
+    sm:justify-center sm:items-center sm:flex-row sm:flex-wrap
+  }
+
+.review{
+  @apply sm:w-[300px] sm:h-[80px] sm:shadow-md sm:shadow-[#333] sm:rounded-md sm:mr-2
+}
+
+
+.h1__about{
+  @apply sm:top-[100px] sm:text-[2.5rem] sm:tracking-widest
+}
+.line{
+  @apply sm:w-[400px] sm:top-[160px] sm:h-[4px] 
+}
+.p__about{
+  @apply  sm:text-[1.7rem] sm:tracking-widest sm:m-4
+}
+.btn-loction__about{
+  @apply sm:bottom-[100px] sm:tracking-wide sm:text-[1.7rem] 
+}
+
+.h1__contact{
+  @apply sm:text-[1.8rem]  sm:tracking-widest sm:top-[60px] 
+}
+.links__contact{
+  @apply sm:text-[1.7rem] sm:mr-7
+
+}
+
+.facebook,
+.fa-instagram,
+.group,
+.call,
+.whatsapp{
+  @apply sm:mr-8 sm:p-2
+}
+.btn-loction__contact{
+  @apply sm:bottom-[150px] sm:tracking-wider sm:text-[1.7rem] 
+}
+.h2__contact{
+  @apply sm:bottom-[20px] sm:tracking-wide sm:text-[1.2rem]  sm:m-7
+}
+.logo__contact{
+  @apply sm:w-[150px] sm:h-[100px] sm:right-0 sm:bottom-[140px]
+}
+}
+
+
+@layer components{
+
+  .links-header{
+    @apply md:m-4 md:text-[1.5rem] md:tracking-widest;
+  }
+  
+  .btn-loction{
+    @apply  md:text-[1.4rem]  md:bottom-[50px] md:left-[35%] ;
+  }
+
+  .h1-header {
+  @apply md:text-[3.5rem] md:top-[200px] md:left-5 md:tracking-[2px] md:leading-[80px] 
+  }
+  .p-header {
+    @apply md:text-[2rem] md:top-[450px] md:left-5;
+  }
+  .slides{
+    @apply md:w-[70px] md:mr-6 
+  }
+
+ .menu__left{
+    @apply  md:left-[20%] md:top-[20vh] md:h-[50vh] md:w-[30%] 
+  }
+  .menu__right{
+    @apply md:right-[20%] md:top-[20vh] md:h-[50vh] md:w-[30%]
+  }
+
+  .h1-menu{
+    @apply md:tracking-[15px] md:top-[50px] md:text-[3rem]  
+  }
+
+  .p-menu{
+    @apply  md:text-[1.8rem] md:bottom-[130px] md:left-20 ;
+  }
+
+  .btn__menu--bar{
+    @apply  md:bottom-[30px] sm:p-1 md:text-[1.7rem] md:text-center md:text-black
+  }
+
+  .slide{
+    @apply md:h-[35rem]
+  }
+
+  .image__slide{
+    @apply md:w-[250px] md:h-[250px] md:rounded-[35%] md:top-[90px];
+  }
+  .footer__slider{
+    @apply md:h-[35vh]  md:bottom-0   
+  }
+  .logo__slider{
+    @apply  md:right-0 md:top-0 md:w-[280px] 
+  }
+
+  .h1__slider{
+    @apply md:text-[2.2rem] md:tracking-widest md:top-2
+  }
+
+  .p__slider{
+    @apply md:text-[1.5rem] md:bottom-10 md:left-[5%]
+  }
+  .btns__slider{
+    @apply md:rounded-[40%] md:top-[50%] md:w-[50px] ;
+  }
+
+  .btn__right{
+    @apply md:right-[-10px] 
+  }
+  .btn__left{
+  @apply md:left-[-10px] 
+  }
+
+  .large__menu{
+    @apply md:top-[55%] md:text-[1.2rem] ;
+  }
+
+  .Allreviews{
+    @apply md:relative md:w-full md:h-[100vh] 
+  }
+  
+  .elements__review{
+    @apply md:absolute md:top-[50px] md:left-0 md:flex 
+    md:justify-center md:items-center md:flex-row md:flex-wrap
+  }
+
+.review{
+  @apply md:w-[380px] md:h-[80px] md:shadow-md md:shadow-[#333] md:rounded-md md:mr-2
+}
+
+
+.h1__about{
+  @apply md:top-[100px] md:text-[2.7rem] md:tracking-widest
+}
+.line{
+  @apply md:w-[450px] md:top-[170px] md:h-[4px] 
+}
+.p__about{
+  @apply  md:text-[1.8rem] md:tracking-widest md:m-4
+}
+.btn-loction__about{
+  @apply md:bottom-[100px] md:tracking-widest md:text-[2rem] 
+}
+
+.h1__contact{
+  @apply md:text-[2rem]  md:tracking-widest md:top-[60px]  md:mr-8
+}
+.links__contact{
+  @apply md:text-[1.8rem] md:mr-8
+
+}
+
+.facebook,
+.fa-instagram,
+.group,
+.call,
+.whatsapp{
+  @apply md:mr-10 md:p-3
+}
+.btn-loction__contact{
+  @apply md:bottom-[150px] md:tracking-wider md:text-[1.8rem] 
+}
+.h2__contact{
+  @apply md:bottom-[20px] md:tracking-wide md:text-[1.5rem] md:m-7
+}
+.logo__contact{
+  @apply md:w-[200px] md:h-[150px] md:right-0 md:bottom-[150px]
+}
+}
+
+
+
+@layer components{
+
+  .header {
+    @apply lg:relative lg:w-full lg:h-screen lg:overflow-hidden bg-[#eee]
+    lg:bg-50% lg:bg-no-repeat lg:bg-right-bottom;
+  }
+
+  
+  .nav-list {
+    @apply lg:hidden 
+  }
+
+  .navigation-full {
+    @apply lg:w-full lg:p-2  lg:flex lg:justify-center lg:items-center;
+  }
+
+  .logo__header{
+    @apply   lg:w-[100px] ;
+  }
+  
+  .fa-list-ul {
+    @apply lg:opacity-0;
+  }
+  .number__header{
+    @apply lg:hidden
+  }
+  .links-header--2{
+    @apply lg:inline-block lg:relative lg:text-[#333] lg:font-extrabold lg:uppercase lg:mr-5
+    lg:duration-1000 lg:text-[1.2rem] lg:hover:after:w-full 
+    lg:hover:after:h-[4px]  lg:hover:after:bg-[#eee] 
+    lg:hover:after:absolute   lg:hover:after:bottom-0 lg:hover:after:left-0
+    lg:hover:scale-[1.1] ;
+  }
+  .btn-loction--2{
+    @apply lg:inline-block lg:absolute lg:text-center lg:text-[1.1rem] lg:text-[#333] 
+    lg:capitalize lg:italic lg:font-bold lg:hover:text-opacity-[0.7] lg:hover:scale-[1.1]
+    lg:duration-500 lg:right-[40px] ;
+  }
+
+  .material-icons{
+    @apply lg:text-[#333]
+  }
+
+  .h1-header {
+  @apply lg:text-[3.5rem] lg:top-[120px] lg:left-5 lg:tracking-[4px] lg:leading-[90px] 
+  lg:text-[#333]
+  }
+  .p-header {
+    @apply lg:text-[1.7rem] lg:top-[420px] lg:left-5 ;
+  }
+  .slides{
+    @apply lg:w-[70px] lg:mr-10
+  }
+
+ .menu__left{
+    @apply  lg:left-[25%] lg:top-[20vh] lg:h-[70vh] lg:w-[25%] 
+  }
+  .menu__right{
+    @apply lg:right-[25%] lg:top-[20vh] lg:h-[70vh] lg:w-[25%]
+  }
+
+  .h1-menu{
+    @apply lg:tracking-[15px] lg:top-[60px] lg:text-[2.5rem]  
+  }
+
+  .p-menu{
+    @apply  lg:text-[1.7rem] lg:left-0 lg:bottom-[0px]  lg:tracking-[2px];
+    
+  }
+
+  .btn__menu--bar{
+    @apply lg:bottom-[0px] lg:right-0 lg:p-1 lg:text-[1.2rem] 
+    lg:text-center lg:text-black lg:hover:scale-[1]
+  }
+
+  .slide{
+    @apply lg:h-[35rem]
+  }
+
+  .image__slide{
+    @apply lg:w-[250px] lg:h-[250px] lg:rounded-[35%] lg:top-[90px];
+  }
+  .footer__slider{
+    @apply lg:h-[35vh]  lg:bottom-0   
+  }
+  .logo__slider{
+    @apply  lg:right-0 lg:top-0 lg:w-[380px] lg:opacity-[1]
+  }
+
+  .h1__slider{
+    @apply lg:text-[2.5rem] lg:tracking-widest lg:top-2
+  }
+
+  .p__slider{
+    @apply lg:text-[1.7rem] lg:bottom-10 lg:left-[5%]
+  }
+  .btns__slider{
+    @apply lg:rounded-[40%] lg:top-[50%] lg:w-[60px] ;
+  }
+
+  .btn__right{
+    @apply lg:right-[-10px] 
+  }
+  .btn__left{
+  @apply lg:left-[-10px] 
+  }
+
+  .large__menu{
+    @apply lg:top-[55%] lg:text-[1.5rem] ;
+  }
+
+  .Allreviews{
+    @apply lg:relative lg:w-full lg:h-[100vh] 
+  }
+  
+  .elements__review{
+    @apply lg:absolute lg:top-[30px] lg:left-0 lg:flex 
+    lg:justify-center lg:items-center lg:flex-row lg:flex-wrap
+  }
+
+.review{
+  @apply lg:w-[320px] lg:h-[80px] lg:shadow-md lg:shadow-[#333] lg:rounded-md lg:mr-5
+}
+
+
+.h1__about{
+  @apply lg:top-[100px] lg:text-[3rem] lg:tracking-widest
+}
+.line{
+  @apply lg:w-[480px] lg:top-[170px] lg:h-[4px] 
+}
+.p__about{
+  @apply  lg:text-[2rem] lg:tracking-widest lg:m-8
+}
+.btn-loction__about{
+  @apply lg:bottom-[100px] lg:tracking-widest lg:text-[2rem] lg:underline
+  lg:decoration-drinky 
+}
+
+.h1__contact{
+  @apply lg:text-[2.5rem]  lg:tracking-widest md:top-[80px]  lg:mr-8
+}
+.links__contact{
+  @apply lg:text-[2rem] lg:mr-8
+}
+
+.facebook,
+.fa-instagram,
+.group,
+.call,
+.whatsapp{
+  @apply lg:mr-10 lg:p-3
+}
+
+.btn-loction__contact{
+  @apply lg:bottom-[150px] lg:tracking-wider lg:text-[2rem] lg:underline
+  lg:decoration-drinky 
+}
+.h2__contact{
+  @apply lg:bottom-[20px] lg:tracking-wider lg:text-[1.5rem] lg:m-8
+}
+.logo__contact{
+  @apply lg:w-[200px] lg:h-[150px] absolute lg:right-0 lg:bottom-[150px]
+}
+}
+
+
+
+@layer components{
+  .links-header--2{
+    @apply xl:inline-block  xl:mr-12 xl:text-[1.4rem] 
+  }
+  .btn-loction--2{
+    @apply xl:inline-block  xl:text-[1.2rem] xl:right-[40px] 
+  }
+  .number__header{
+    @apply xl:hidden
+  }
+
+  .h1-header {
+  @apply xl:text-[3rem] xl:top-[80px] xl:left-5 xl:tracking-[4px] xl:leading-[80px] 
+  }
+  .p-header {
+    @apply xl:text-[2rem] xl:top-[400px] xl:left-5;
+  }
+  .slides{
+    @apply xl:w-[70px] xl:mr-8
+  }
+
+ .menu__left{
+    @apply  xl:left-[25%] xl:top-[20vh] xl:h-[70vh] xl:w-[25%] 
+  }
+  .menu__right{
+    @apply xl:right-[25%] xl:top-[20vh] xl:h-[70vh] xl:w-[25%]
+  }
+
+  .h1-menu{
+    @apply xl:tracking-[18px] xl:top-[60px] xl:text-[3.5rem]  
+  }
+
+  .p-menu{
+    @apply  xl:text-[2rem] xl:bottom-[0px] xl:left-20 ;
+  }
+
+  .btn__menu--bar{
+    @apply xl:bottom-[0px] xl:right-20 xl:p-1 xl:text-[1.8rem] 
+    xl:text-black
+  }
+
+  .slide{
+    @apply xl:h-[35rem]
+  }
+
+  .image__slide{
+    @apply xl:w-[250px] xl:h-[250px] xl:rounded-[35%] xl:top-[90px];
+  }
+  .footer__slider{
+    @apply xl:h-[35vh]  xl:bottom-0   
+  }
+
+  .logo__slider{
+    @apply  xl:right-0 xl:top-[-50px] xl:w-[450px] xl:opacity-[1]
+  }
+
+  .h1__slider{
+    @apply xl:text-[2.5rem] xl:tracking-widest xl:top-2
+  }
+
+  .p__slider{
+    @apply xl:text-[1.8rem] xl:bottom-10 xl:left-[5%]
+  }
+  .btns__slider{
+    @apply xl:rounded-[40%] xl:top-[50%] xl:w-[70px] ;
+  }
+
+  .btn__right{
+    @apply xl:right-[-10px] 
+  }
+  .btn__left{
+  @apply xl:left-[-10px] 
+  }
+
+  .large__menu{
+    @apply xl:top-[55%] xl:text-[1.2rem] ;
+  }
+
+  .Allreviews{
+    @apply xl:relative xl:w-full xl:h-[100vh] 
+  }
+  
+  .elements__review{
+    @apply xl:absolute xl:top-[30px] xl:left-0 xl:flex 
+    xl:justify-center xl:items-center xl:flex-row xl:flex-wrap
+  }
+
+.review{
+  @apply xl:w-[400px] xl:h-[80px] xl:shadow-md xl:shadow-[#333] xl:rounded-md xl:mr-2
+}
+
+.h1__about{
+  @apply xl:top-[100px] xl:text-[3rem] xl:tracking-widest
+}
+
+.line{
+  @apply xl:w-[500px] xl:top-[170px] xl:h-[5px] 
+}
+
+.p__about{
+  @apply  xl:text-[2.2rem] xl:tracking-widest xl:m-10
+}
+.btn-loction__about{
+  @apply xl:bottom-[100px] xl:tracking-widest xl:text-[2rem] 
+}
+
+.h1__contact{
+  @apply xl:text-[2.5rem]  xl:tracking-widest xl:top-[80px]  xl:mr-10
+}
+.links__contact{
+  @apply xl:text-[2rem] xl:mr-12
+}
+.facebook,
+.fa-instagram,
+.group,
+.call,
+.whatsapp{
+  @apply xl:mr-12 xl:p-4
+}
+.btn-loction__contact{
+  @apply xl:bottom-[150px] xl:tracking-wider xl:text-[2rem] 
+}
+.h2__contact{
+  @apply xl:bottom-[20px] xl:tracking-wide xl:text-[1.8rem] xl:m-8
+}
+}
+
+
+
+
+@layer components{
+
+  .links-header--2{
+    @apply 2xl:inline-block 2xl:mr-12 2xl:text-[1.5rem] 
+  }
+  .btn-loction--2{
+    @apply 2xl:inline-block 2xl:text-[1.5rem] 2xl:right-[40px] 
+  }
+  .number__header{
+    @apply 2xl:hidden
+  }
+
+  .h1-header {
+  @apply 2xl:text-[3.5rem] 2xl:top-[100px] 2xl:left-5 2xl:tracking-[10px] 2xl:leading-[90px] 
+  }
+  .p-header {
+    @apply 2xl:text-[2rem] 2xl:top-[450px] 2xl:left-5;
+  }
+  .slides{
+    @apply 2xl:w-[70px] xl:mr-10
+  }
+
+ .menu__left{
+    @apply  2xl:left-[25%] 2xl:top-[20vh] 2xl:h-[70vh] 2xl:w-[25%] 
+  }
+  .menu__right{
+    @apply 2xl:right-[25%] 2xl:top-[20vh] 2xl:h-[70vh] 2xl:w-[25%]
+  }
+
+  .h1-menu{
+    @apply 2xl:tracking-[18px] 2xl:top-[60px] 2xl:text-[3.5rem]  
+  }
+
+  .p-menu{
+    @apply  2xl:text-[2rem] 2xl:bottom-[0px] 2xl:left-20 ;
+  }
+
+  .btn__menu--bar{
+    @apply 2xl:bottom-[0px] 2xl:right-20 2xl:p-1 2xl:text-[1.8rem] 
+    2xl:text-black
+  }
+
+  .slide{
+    @apply 2xl:h-[35rem]
+  }
+
+  .image__slide{
+    @apply 2xl:w-[300px] 2xl:h-[300px] 2xl:rounded-[35%] 2xl:top-[90px];
+  }
+  .footer__slider{
+    @apply 2xl:h-[35vh]  2xl:bottom-0   
+  }
+  .logo__slider{
+    @apply  2xl:right-0 2xl:top-[-50px] 2xl:w-[500px] 2xl:opacity-[1]
+  }
+
+  .h1__slider{
+    @apply 2xl:text-[2.5rem] 2xl:tracking-widest 2xl:top-2
+  }
+
+  .p__slider{
+    @apply 2xl:text-[1.8rem] 2xl:bottom-10 2xl:left-[5%]
+  }
+  .btns__slider{
+    @apply 2xl:rounded-[40%] 2xl:top-[50%] 2xl:w-[70px] ;
+  }
+
+  .btn__right{
+    @apply 2xl:right-[-10px] 
+  }
+  .btn__left{
+  @apply xl:left-[-10px] 
+  }
+
+  .large__menu{
+    @apply 2xl:top-[55%] 2xl:text-[1.5rem] 2xl:left-52 ;
+  }
+
+  .Allreviews{
+    @apply 2xl:relative 2xl:w-full 2xl:h-[100vh] 
+  }
+  
+  .elements__review{
+    @apply 2xl:absolute 2xl:top-[30px] 2xl:left-0 2xl:flex 
+    2xl:justify-center 2xl:items-center 2xl:flex-row 2xl:flex-wrap
+  }
+
+.review{
+  @apply 2xl:w-[500px] 2xl:h-[100px] 2xl:shadow-md 2xl:shadow-[#333] 2xl:rounded-md 2xl:mr-2
+}
+
+.h1__about{
+  @apply 2xl:top-[100px] 2xl:text-[3.5rem] 2xl:tracking-widest
+}
+
+.line{
+  @apply 2xl:w-[550px] 2xl:top-[180px] 2xl:h-[5px] 
+}
+
+.p__about{
+  @apply  2xl:text-[2.5rem] 2xl:tracking-widest 2xl:m-10
+}
+.btn-loction__about{
+  @apply 2xl:bottom-[100px] 2xl:tracking-widest 2xl:text-[2rem] 
+}
+
+.h1__contact{
+  @apply 2xl:text-[2.5rem]  2xl:tracking-widest 2xl:top-[80px]  2xl:mr-10
+}
+.links__contact{
+  @apply 2xl:text-[2rem] 2xl:mr-12
+}
+.facebook,
+.fa-instagram,
+.group,
+.call,
+.whatsapp{
+  @apply 2xl:mr-12 2xl:p-4
+}
+.btn-loction__contact{
+  @apply 2xl:bottom-[150px] 2xl:tracking-wider 2xl:text-[2rem] 
+}
+.h2__contact{
+  @apply 2xl:bottom-[20px] 2xl:tracking-wide 2xl:text-[1.8rem] 2xl:m-8
+}
+}
